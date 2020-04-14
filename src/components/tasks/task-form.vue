@@ -65,9 +65,12 @@ export default {
         `/projects/${this.$route.params.projectId}/tasks/${this.$route.params.taskId}`,
         this.task
       ).then(() => {
+        this.$toasted.show("Task Updated");
         this.message = "Task Updated Successfully !";
-        this.snakbar = true;
-        this.$emit("updated");
+        // this.snakbar = true;
+        this.$store.commit("snackbar/showSnackbar");
+        this.$store.state.snackbar.message = "Task Updated !";
+        // this.$emit("updated");
       });
     }
   }

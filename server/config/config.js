@@ -5,6 +5,7 @@ const sessionOptions = {
   cookie: {}
 }
 // const connString = "mongodb+srv://sabeel1:kZiZCUmCzazZclow@cluster0-mf5km.mongodb.net/eventsdb";
+// const connString = "mongodb+srv://sabeel1:kZiZCUmCzazZclow@cluster0-mf5km.mongodb.net/eventsdb";
 const connString = "mongodb://localhost:27017/eventsdb";
 
 module.exports = {

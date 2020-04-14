@@ -29,9 +29,14 @@
 
     <v-content>
       <v-container fluid>
+        <v-progress-linear indeterminate v-if="$store.state.progress.mainLoader"></v-progress-linear>
         <slot></slot>
       </v-container>
     </v-content>
+    <v-snackbar v-model="$store.state.snackbar.snackbar" color="success">
+      {{$store.state.snackbar.message}}
+      <v-btn color="white" text @click="$store.commit('snackbar/hideSnackbar',false)">Close</v-btn>
+    </v-snackbar>
   </v-app>
 </template>
 
